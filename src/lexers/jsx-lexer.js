@@ -1,5 +1,6 @@
-import JavascriptLexer from './javascript-lexer'
 import * as ts from 'typescript'
+
+import JavascriptLexer from './javascript-lexer'
 
 export default class JsxLexer extends JavascriptLexer {
   constructor(options = {}) {
@@ -75,7 +76,7 @@ export default class JsxLexer extends JavascriptLexer {
 
     const getKey = (node) => getPropValue(node, this.attr)
 
-    if (tagNode.tagName.text === 'Trans') {
+    if (tagNode.tagName.text === 'TransTypo') {
       const entry = {}
       entry.key = getKey(tagNode)
 
